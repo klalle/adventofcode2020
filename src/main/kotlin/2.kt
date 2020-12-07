@@ -1,6 +1,6 @@
 import java.io.File
 class Two{
-    /*fun run() {
+    /*fun run() {//part 1
         var tot=0;
         File("src/main/resources/2.txt").forEachLine {
             println(it)
@@ -15,7 +15,8 @@ class Two{
         }
         println(tot)
     }*/
-    /*fun run() {
+
+    /*fun run() {//part 2
         var tot=0;
         File("src/main/resources/2.txt").forEachLine {
             println(it)
@@ -31,5 +32,6 @@ class Two{
         }
         println(tot)
     }*/
+
 }
 

@@ -1,6 +1,6 @@
 import java.io.File
 class Three{
-    fun run() {
+    fun run() {//part 1
         var trees=0;
         var pos = 0
         var first=true
@@ -15,7 +15,7 @@ class Three{
         println(trees)
     }
 
-    /*fun run() {
+    /*fun run() {//part 2
         var trees=0;
         var pos=0
         var first=true

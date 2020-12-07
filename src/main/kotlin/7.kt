@@ -1,7 +1,30 @@
 import java.io.File
 class Seven{
+     /*var listOfBags = mutableListOf<String>()
+
+    fun run() { //Part 1
+        findParentBag("shiny gold")
+        listOfBags.sort()
+
+        println(listOfBags.size) //!47 !46 !48
+    }
+
+    fun findParentBag(bag: String)
+    {
+        File("src/main/resources/7.txt").forEachLine {
+            val regexMatch = """(.*) bags contain (\d .*)*\d $bag""".toRegex().find(it)
+            if(regexMatch != null) {
+                val parent = regexMatch.groupValues[1]
+                if(!listOfBags.contains(parent))
+                    listOfBags.add(parent)
+                findParentBag(parent)
+            }
+
+        }
+    }*/
+
     var totNrOfBags=0
-    fun run() {
+    fun run() { //Part 2
         findChildBags("shiny gold",1)
         println(totNrOfBags)//58175
     }
@@ -22,30 +45,5 @@ class Seven{
             }
         }
     }
-
-
-
-    /*var listOfBags = mutableListOf<String>()
-
-    fun run() {
-        findParentBag("shiny gold")
-        listOfBags.sort()
-
-        println(listOfBags.size) //!47 !46 !48
-    }
-
-    fun findParentBag(bag: String)
-    {
-        File("src/main/resources/7.txt").forEachLine {
-            val regexMatch = """(.*) bags contain (\d .*)*\d $bag""".toRegex().find(it)
-            if(regexMatch != null) {
-                val parent = regexMatch.groupValues[1]
-                if(!listOfBags.contains(parent))
-                    listOfBags.add(parent)
-                findParentBag(parent)
-            }
-
-        }
-    }*/
 }
 
