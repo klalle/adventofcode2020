@@ -2,7 +2,7 @@ import java.io.File
 class Eight{
      var listOfCommandIndex = mutableListOf<Int>()
 
-    /*fun run() { //Part 1
+    fun run() { //Part 1
         val input = File("src/main/resources/8.txt").readLines()
         var i = 0
         var acc=0
@@ -23,8 +23,8 @@ class Eight{
 
             i++
         }
-    }*/
-    fun run() { //Part 2
+    }
+    fun run2() { //Part 2
         val input = File("src/main/resources/8.txt").readLines()
         var i = 0
         var acc=0
@@ -32,7 +32,7 @@ class Eight{
         while(i<input.size)
         {
             if(listOfCommandIndex.contains(i)) {
-                println("$changeIndex not the one, trying to change next...")
+                //println("$changeIndex not the one, trying to change next...")
                 do{
                     changeIndex--
                 } while (changeIndex>0 && input[changeIndex].contains("acc"))
@@ -54,9 +54,6 @@ class Eight{
             }
         } //!1160
         println("Done with changeindex $changeIndex and acc: $acc")
-
     }
-
-
 }
 

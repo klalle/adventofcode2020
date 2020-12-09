@@ -1,6 +1,6 @@
 import java.io.File
 class Five{
-    /*fun run() { //part 1
+    fun run() { //part 1
         var highestId=0
         File("src/main/resources/5.txt").forEachLine {
             var rMin = 0
@@ -20,8 +20,8 @@ class Five{
                 highestId=id
         }
         println(highestId)
-    }*/
-    fun run() { //part 2
+    }
+    fun run2() { //part 2
         var highestId=0
         var listOfIds = mutableListOf<Int>()
         File("src/main/resources/5.txt").forEachLine {

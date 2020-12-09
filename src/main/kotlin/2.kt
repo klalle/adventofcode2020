@@ -1,9 +1,9 @@
 import java.io.File
 class Two{
-    /*fun run() {//part 1
+    fun run() {//part 1
         var tot=0;
         File("src/main/resources/2.txt").forEachLine {
-            println(it)
+            //println(it)
             val min = it.split("-")[0].toInt()
             val max = it.split(" ")[0].split("-")[1].toInt()
             val letter = it.split(" ")[1][0]
@@ -14,12 +14,12 @@ class Two{
             }
         }
         println(tot)
-    }*/
+    }
 
-    /*fun run() {//part 2
+    fun run2() {//part 2
         var tot=0;
         File("src/main/resources/2.txt").forEachLine {
-            println(it)
+            //println(it)
             val splitten = it.split(" ")
             val min = splitten[0].split("-")[0].toInt()
             val max = splitten[0].split("-")[1].toInt()
@@ -30,8 +30,8 @@ class Two{
             if((a==letter || b==letter) && (a!=b))
                 tot++
         }
-        println(tot)
-    }*/
+        //println(tot)
+    }
 
 }
 

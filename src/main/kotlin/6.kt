@@ -1,6 +1,6 @@
 import java.io.File
 class Six{
-    /*fun run() {//part 1
+    fun run() {//part 1
         var listOfChars = mutableListOf<Char>()
         var tot=0
         File("src/main/resources/6.txt").forEachLine {
@@ -15,8 +15,8 @@ class Six{
         }
         tot += listOfChars.size //add last group (File is trimming empty lines)
         println(tot) //6430
-    }*/
-    fun run() {//part 2
+    }
+    fun run2() {//part 2
         var listOfChars = mutableListOf<Char>()
         var tot=0
         var first=true

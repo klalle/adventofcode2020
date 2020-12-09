@@ -15,7 +15,7 @@ class Three{
         println(trees)
     }
 
-    /*fun run() {//part 2
+    fun run2() {//part 2
         var trees=0;
         var pos=0
         var first=true
@@ -32,6 +32,6 @@ class Three{
             row++
         }
         println(trees)
-    }*/
+    }
 }
 

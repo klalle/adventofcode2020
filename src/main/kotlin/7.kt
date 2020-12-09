@@ -1,38 +1,39 @@
 import java.io.File
 class Seven{
-     /*var listOfBags = mutableListOf<String>()
-
+    var listOfBags = mutableListOf<String>()
+    private val input = File("src/main/resources/7.txt").readLines()
     fun run() { //Part 1
         findParentBag("shiny gold")
         listOfBags.sort()
-
-        println(listOfBags.size) //!47 !46 !48
+        println(listOfBags.size)
     }
 
-    fun findParentBag(bag: String)
+    private fun findParentBag(bag: String)
     {
-        File("src/main/resources/7.txt").forEachLine {
-            val regexMatch = """(.*) bags contain (\d .*)*\d $bag""".toRegex().find(it)
+        val regex = """(.*) bags contain (\d .*)*\d $bag""".toRegex()
+        input.forEach() {
+            val regexMatch = regex.find(it)
             if(regexMatch != null) {
                 val parent = regexMatch.groupValues[1]
-                if(!listOfBags.contains(parent))
+                if(!listOfBags.contains(parent)) {
                     listOfBags.add(parent)
-                findParentBag(parent)
+                    findParentBag(parent)
+                }
             }
-
         }
-    }*/
+    }
 
     var totNrOfBags=0
-    fun run() { //Part 2
+    fun run2() { //Part 2
         findChildBags("shiny gold",1)
         println(totNrOfBags)//58175
     }
 
-    fun findChildBags(bag: String, antalParent: Int)
+    private fun findChildBags(bag: String, antalParent: Int)
     {
-        File("src/main/resources/7.txt").forEachLine {
-            val regexMatch = """$bag bags contain (\d .*)*.""".toRegex().find(it)
+        val regex="""$bag bags contain (\d .*)*.""".toRegex()
+        input.forEach() {
+            val regexMatch = regex.find(it)
             if(regexMatch!=null && regexMatch.groupValues[1]!=null) {
                 regexMatch.groupValues[1].split(", ").forEach{ b->
                     if(b!=""){

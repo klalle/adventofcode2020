@@ -1,6 +1,6 @@
 import java.io.File
 class Four{
-    /* fun run() {//part 1
+     fun run() {//part 1
 
         var byr =false//(Birth Year)
         var iyr =false//(Issue Year)
@@ -42,8 +42,8 @@ class Four{
             }
         }
         println(countValid)
-    }*/
-    fun run() { //part 2
+    }
+    fun run2() { //part 2
         var byr =false//(Birth Year)
         var iyr =false//(Issue Year)
         var eyr =false//(Expiration Year)
