@@ -1,15 +1,17 @@
 import java.io.File
 class Nine{
-    val preamleLen=25
+    private val preambleLen=25
     fun run() { //Part 1
         val input = File("src/main/resources/9.txt").readLines().map{it.toLong()}
         var preambleList= mutableListOf<Long>()
-        (0..preamleLen).map{preambleList.add(input[it])}
-        var i = preamleLen
+        (0..preambleLen).map{preambleList.add(input[it])}
+        var i = preambleLen
         while(i<input.size)
         {
-            if(!One().run(preambleList,input[i]))
+            if(!One().run(preambleList,input[i])) {
                 println(input[i]) //466456641
+                return
+            }
             preambleList.removeAt(0)
             preambleList.add(input[i])
             i++
@@ -24,10 +26,9 @@ class Nine{
         {
             var j=i
             var sum=0L
-            while(j<input.size && sum<466456641){
-                sum+=input[j]
-                j++
-            }
+            while(j<input.size && sum<466456641)
+                sum+=input[j++]
+
             if(sum==target)
             {
                 val min = (i..j).map{input[it]}.minOrNull()
