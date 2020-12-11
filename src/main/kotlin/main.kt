@@ -2,7 +2,7 @@ import kotlin.system.measureTimeMillis
 
 fun main(args: Array<String>) {
 //    println("${measureTimeMillis {Nine().run()}}ms")
-    println("${measureTimeMillis {Ten().run2()}}ms")
+    println("${measureTimeMillis {Eleven().run()}}ms")
     /*val oneA=measureTimeMillis { One().run() }
     val oneB=measureTimeMillis { One().run2() }
     val twoA=measureTimeMillis { Two().run() }
