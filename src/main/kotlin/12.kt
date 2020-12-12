@@ -59,24 +59,16 @@ class Twelve{
         var east=0
         var wpN=1
         var wpE=10
-        var direction=0
         File("src/main/resources/12.txt").readLines().forEach{
             var intPart = it.substring(1).toInt()
             when (it[0]){
                 'L' -> {
-                    direction-=intPart
-                    if(direction<0)
-                        direction+=360
                     val len = sqrt(wpE.toDouble().pow(2.0) + wpN.toDouble().pow(2.0))
                     val curAngle = atan2(wpN.toDouble(), wpE.toDouble())
                     wpE = (len*cos(curAngle+intPart * Math.PI / 180.0)).roundToInt()
                     wpN = (len*sin(curAngle+intPart * Math.PI / 180.0)).roundToInt()
-                    println("")
                 }
                 'R' -> {
-                    direction+=intPart
-                    if(direction>=360)
-                        direction-=360
                     val len = sqrt(wpE.toDouble().pow(2.0) + wpN.toDouble().pow(2.0))
                     val curAngle = atan2(wpN.toDouble(), wpE.toDouble())
                     wpE = (len*cos(curAngle-intPart * Math.PI / 180.0)).roundToInt()
@@ -100,7 +92,7 @@ class Twelve{
                 }
             }
         }
-        println("${abs(north)+abs(east)}") //!121257 !23873
+        println("${abs(north)+abs(east)}") 
     }
 }
 
